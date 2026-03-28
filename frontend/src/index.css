@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --accent-cyan: #00d4ff;
+    --accent-amber: #ffb300;
+    --accent-green: #00e676;
+    --accent-red: #ff5252;
+    --accent-purple: #b388ff;
+  }
+}
+
+@layer utilities {
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.15), 0 0 40px rgba(0, 212, 255, 0.05);
+  }
+  .glow-green {
+    box-shadow: 0 0 20px rgba(0, 230, 118, 0.15), 0 0 40px rgba(0, 230, 118, 0.05);
+  }
+  .text-glow-cyan {
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .scanline {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.03) 2px,
+      rgba(0,0,0,0.03) 4px
+    );
+    pointer-events: none;
+  }
+}
